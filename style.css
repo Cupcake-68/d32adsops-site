@@ -1,0 +1,50 @@
+:root {
+  --ink: #1a2332;
+  --muted: #5b6675;
+  --accent: #1f4e79;
+  --line: #e3e8ef;
+  --bg: #ffffff;
+  --bg-soft: #f4f6f9;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+  font-size: 17px;
+}
+.container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+a { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.25; margin: 0.2em 0 0.5em; }
+h2 { font-size: 1.35rem; margin-top: 2em; }
+h3 { font-size: 1.05rem; margin: 0 0 0.4em; }
+.lede { font-size: 1.15rem; color: var(--muted); }
+.site-header { border-bottom: 1px solid var(--line); }
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 18px; padding-bottom: 18px; flex-wrap: wrap; gap: 12px;
+}
+.logo { font-weight: 700; font-size: 1.2rem; color: var(--ink); text-decoration: none; }
+nav a { margin-left: 22px; color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+nav a:first-child { margin-left: 0; }
+nav a:hover, nav a.active { color: var(--accent); }
+.hero { background: var(--bg-soft); padding: 56px 0 48px; margin-bottom: 8px; }
+.hero h1 { max-width: 640px; }
+.hero .lede { max-width: 640px; }
+main { padding: 40px 0 64px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 16px; }
+.card { border: 1px solid var(--line); border-radius: 10px; padding: 20px; background: var(--bg); }
+.card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.steps { padding-left: 22px; }
+.steps li { margin-bottom: 14px; }
+.steps li::marker { color: var(--accent); font-weight: 700; }
+.site-footer { border-top: 1px solid var(--line); padding: 24px 0; font-size: 0.9rem; color: var(--muted); }
+.footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.footer-inner a { color: var(--muted); text-decoration: none; }
+.footer-inner a:hover { color: var(--accent); }
+@media (max-width: 600px) {
+  h1 { font-size: 1.6rem; }
+  .hero { padding: 40px 0 32px; }
+}
